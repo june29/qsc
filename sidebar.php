@@ -2,9 +2,6 @@
     <ul>
       <?php   /* Widgetized sidebar, if you have the plugin installed. */
           if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-      <li>
-        <?php include (TEMPLATEPATH . '/searchform.php'); ?>
-      </li>
 
       <!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
       <li><h2>Author</h2>
@@ -54,8 +51,6 @@
       <?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
 
       <?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
-        <?php wp_list_bookmarks(); ?>
-
         <li><h2>Meta</h2>
         <ul>
           <?php wp_register(); ?>

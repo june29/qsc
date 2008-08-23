@@ -18,13 +18,11 @@
 <div id="wrapper">
 
 <div id="header">
-  <div id="headerimg">
-    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-  </div>
+  <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+  <?php include (TEMPLATEPATH . '/searchform.php'); ?>
   <ul id="grobal-navigator">
-   <li>About</li>
-   <li>Archive</li>
-   <li>Tags</li>
-   <li>Extras</li>
+    <li>About</li>
+    <li>Archive</li>
+    <li>Tags</li>
   </ul>
 </div>
