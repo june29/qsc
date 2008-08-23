@@ -21,4 +21,10 @@
   <div id="headerimg">
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
   </div>
+  <ul id="grobal-navigator">
+   <li>About</li>
+   <li>Archive</li>
+   <li>Tags</li>
+   <li>Extras</li>
+  </ul>
 </div>

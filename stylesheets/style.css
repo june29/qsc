@@ -1,4 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  width: 1000px;
+  width: 800px;
   margin: auto;
+  background: #fff url(../images/background.png) repeat-x scroll center top;
+}
+
+h1 {
+  padding: 20px 0;
+  height: 40px;
+}
+
+h1 a {
+  color: #e4007f;
+  text-decoration: none;
+}
+
+#grobal-navigator {
+  border-right: solid 20px #000;
+  height: 50px;
+}
+
+#grobal-navigator li {
+  display: inline;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #094;
+  background: #000;
+  -moz-border-radius: 0 0 10px 10px;
+}
+
+.navigation {
+  margin: 10px 0;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+h2 {
+  padding: 10px 20px;
+  background-color: #000;
+  -moz-border-radius: 10px 0 10px 0;
+}
+
+h2 a {
+  color: #094;
+  text-decoration: none;
+}
+
+.postmetadata {
+  padding: 10px;
+  background-color: #ccc;
+  border-left: solid 20px #000;
+  border-bottom: solid 20px #000;
+  -moz-border-radius: 0 10px 0 0;
+}
+
+.postmetadata a {
+  color: #094;
+}
+
+a[rel~="tag"] {
+  color: #e4007f;
+  text-decoration: none;
+  padding: 5px;
+  background-color: #333;
+  -moz-border-radius: 5px;
+}
+
+.entry-content {
+  padding: 15px;
+  border-right: solid 20px #000;
+}
+
+h3 {
+  padding: 10px 0;
+}
+
+.entry-content p {
+  padding: 5px 0;
+}
+
+.entry-content * a {
+  color: #094;
+}
+
+.entry-content img, .entry-content object {
+  display: block;
+  margin: auto;
+}
+
+.entry-content a img {
+  border: none;
+}
+
+.entry-content pre {
+  padding: 20px;
+  background-color: #ccc;
+  overflow-x: auto;
+}
+
+.entry-content ul {
+  padding: 10px;
+  list-style-position: inside;
+}
+
+hr {
+  display: none;
 }
