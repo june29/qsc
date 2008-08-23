@@ -4,7 +4,7 @@
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?></title>
+<title><?php if ( is_single() ) ?><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { ?> - <?php } ?><?php bloginfo('name'); ?></title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -16,9 +16,9 @@
 // Checks to see whether it needs a sidebar or not
 if ( !empty($withcomments) && !is_single() ) {
 ?>
-	#page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbg-<?php bloginfo('text_direction'); ?>.jpg") repeat-y top; border: none; }
+  #page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbg-<?php bloginfo('text_direction'); ?>.jpg") repeat-y top; border: none; }
 <?php } else { // No sidebar ?>
-	#page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg") repeat-y top; border: none; }
+  #page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg") repeat-y top; border: none; }
 <?php } ?>
 
 </style>
@@ -30,9 +30,9 @@ if ( !empty($withcomments) && !is_single() ) {
 
 
 <div id="header">
-	<div id="headerimg">
-		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<div class="description"><?php bloginfo('description'); ?></div>
-	</div>
+  <div id="headerimg">
+    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <div class="description"><?php bloginfo('description'); ?></div>
+  </div>
 </div>
 <hr />
