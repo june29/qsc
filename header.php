@@ -6,33 +6,19 @@
 
 <title><?php if ( is_single() ) ?><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { ?> - <?php } ?><?php bloginfo('name'); ?></title>
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<meta name="viewport" content="width=480" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/style.css" type="text/css" media="screen and (min-device-width:481px)" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/iphone.css" type="text/css" media="only screen and (max-device-width:480px)" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-<style type="text/css" media="screen">
-
-<?php
-// Checks to see whether it needs a sidebar or not
-if ( !empty($withcomments) && !is_single() ) {
-?>
-  #page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbg-<?php bloginfo('text_direction'); ?>.jpg") repeat-y top; border: none; }
-<?php } else { // No sidebar ?>
-  #page { background: url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg") repeat-y top; border: none; }
-<?php } ?>
-
-</style>
 
 <?php wp_head(); ?>
 </head>
 <body>
-<div id="page">
-
+<div id="wrapper">
 
 <div id="header">
   <div id="headerimg">
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-    <div class="description"><?php bloginfo('description'); ?></div>
   </div>
 </div>
-<hr />
