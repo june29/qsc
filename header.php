@@ -47,7 +47,5 @@ bloginfo('name'); ?></title>
   <?php include (TEMPLATEPATH . '/searchform.php'); ?>
   <ul id="grobal-navigator">
     <li><a href="<?php echo get_option('home'); ?>/about">About</a></li>
-    <li><a href="<?php echo get_option('home'); ?>/about">Archive</a></li>
-    <li><a href="<?php echo get_option('home'); ?>/about">Tags</a></li>
   </ul>
 </div>
