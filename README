@@ -13,6 +13,10 @@ quasi-Second-classはjune29が自身のブログ用に作成したWordPressテ�
 
 == メモ
 
+=== WordPressのバージョン
+
+WordPress 2.6.1 でのみ表示を確認しています．
+
 === -moz-border-radiusの使用
 
 試験的に-moz-border-radiusプロパティを使用しています．Firefox3で閲覧したときに，角丸になる箇所がいくつかあります．
