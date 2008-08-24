@@ -14,6 +14,7 @@ if(is_month()): echo get_the_time('Y年m月のエントリ'); endif;
 if(is_day()): echo get_the_time('Y年m月d日のエントリ'); endif;
 if(is_search()): echo $s.' の検索結果 - '; endif;
 if(is_single()): echo wp_title('', false); endif;
+if(is_page()): echo wp_title('', false); endif;
 if(wp_title('', false)) echo ' - ';
 bloginfo('name'); ?></title>
 
