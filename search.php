@@ -13,7 +13,7 @@
 
     <div class="navigation">
       <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
-      <div class="alignright"><?php previous_posts_link('より新しいエントリを表示') ?></div>
+      <div class="alignright"><?php previous_posts_link('もっと新しいエントリを表示') ?></div>
     </div>
 
     <?php while (have_posts()) : the_post(); ?>
@@ -35,7 +35,7 @@
 
     <div class="navigation">
       <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
-      <div class="alignright"><?php previous_posts_link('より新しいエントリを表示') ?></div>
+      <div class="alignright"><?php previous_posts_link('もっと新しいエントリを表示') ?></div>
     </div>
 
   <?php else : ?>

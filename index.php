@@ -24,10 +24,10 @@
     <?php endwhile; ?>
   </div>
 
-    <div class="navigation">
-      <div class="alignleft"><?php next_posts_link('< Older Entries') ?></div>
-      <div class="alignright"><?php previous_posts_link('Newer Entries >') ?></div>
-    </div>
+  <div class="navigation">
+    <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
+    <div class="alignright"><?php previous_posts_link('もっと新しいエントリを表示') ?></div>
+  </div>
 
   <?php else : ?>
 
@@ -38,7 +38,5 @@
   <?php endif; ?>
 
   </div>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
