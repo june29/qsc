@@ -25,6 +25,19 @@ bloginfo('name'); ?></title>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php wp_head(); ?>
+
+<script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
+<script type="text/javascript">
+  Hatena.Star.SiteConfig = {
+    entryNodes: {
+      'div.hentry': {
+        uri: 'h2.entry-title a',
+        title: 'h2.entry-title',
+        container: 'h2.entry-title'
+      }
+    }
+  };
+</script>
 </head>
 <body>
 <div id="wrapper">
