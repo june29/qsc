@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-	<div id="content" class="narrowcolumn">
+  <div id="content" class="narrowcolumn">
 
-		<h2 class="center">Error 404 - Not Found</h2>
-
-	</div>
-
-<?php get_sidebar(); ?>
+    <h2 class="pagetitle">404 - Not Found</h2>
+    <div class="noresult">
+    指定のURLに対応するページは見つかりませんでした
+    </div>
+  </div>
 
 <?php get_footer(); ?>
