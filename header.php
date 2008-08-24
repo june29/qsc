@@ -4,7 +4,18 @@
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<title><?php if ( is_single() ) ?><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { ?> - <?php } ?><?php bloginfo('name'); ?></title>
+<title>
+<?php
+if(is_404()): echo 'Not Found - '; endif;
+if(is_category()): echo single_cat_title().' カテゴリのエントリ'; endif;
+if(is_tag()): echo single_tag_title().' タグを含むエントリ'; endif;
+if(is_year()): echo get_the_time('Y年のエントリ'); endif;
+if(is_month()): echo get_the_time('Y年m月のエントリ'); endif;
+if(is_day()): echo get_the_time('Y年m月d日のエントリ'); endif;
+if(is_search()): echo $s.' の検索結果 - '; endif;
+if(is_single()): echo wp_title('', false); endif;
+if(wp_title('', false)) echo ' - ';
+bloginfo('name'); ?></title>
 
 <meta name="viewport" content="width=480" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/style.css" type="text/css" media="screen and (min-device-width:481px)" />

@@ -1,15 +1,10 @@
 <?php get_header(); ?>
 
-<?php
-  $str = $_SERVER["QUERY_STRING"];
-  $array = split("=", $str);
-  $search_word = urldecode($array[1]);
-?>
   <div id="content" class="narrowcolumn">
 
   <?php if (have_posts()) : ?>
 
-    <div class="pagetitle">「<?php echo $search_word; ?>」の検索結果</div>
+    <div class="pagetitle">「<?php echo $s; ?>」の検索結果</div>
 
     <div class="navigation">
       <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
