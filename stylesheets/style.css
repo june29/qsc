@@ -79,6 +79,19 @@ h2 a {
   text-decoration: none;
 }
 
+.pagetitle {
+  font-size: 130%;
+  padding: 10px 20px;
+  color: #094;
+  background-color: #000;
+  -moz-border-radius: 10px 0 0 10px;
+}
+
+.noresult {
+  padding: 20px;
+  border-right: solid 20px #000;
+}
+
 .postmetadata {
   font-size: 90%;
   padding: 10px;

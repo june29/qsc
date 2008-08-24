@@ -1,42 +1,50 @@
 <?php get_header(); ?>
 
-	<div id="content" class="narrowcolumn">
+<?php
+  $str = $_SERVER["QUERY_STRING"];
+  $array = split("=", $str);
+  $search_word = urldecode($array[1]);
+?>
+  <div id="content" class="narrowcolumn">
 
-	<?php if (have_posts()) : ?>
+  <?php if (have_posts()) : ?>
 
-		<h2 class="pagetitle">Search Results</h2>
+    <div class="pagetitle">「<?php echo $search_word; ?>」の検索結果</div>
 
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
+    <div class="navigation">
+      <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
+      <div class="alignright"><?php previous_posts_link('より新しいエントリを表示') ?></div>
+    </div>
 
+    <?php while (have_posts()) : the_post(); ?>
 
-		<?php while (have_posts()) : the_post(); ?>
+      <div class="post hentry" id="post-<?php the_ID(); ?>">
+        <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+        <p class="postmetadata">
+          Date: <a href="<?php echo get_option('home'); ?>/<?php the_time('Y') ?>"><?php the_time('Y') ?></a>/<a href="<?php echo get_option('home'); ?>/<?php the_time('Y/m') ?>"><?php the_time('m') ?></a>/<a href="<?php echo get_option('home'); ?>/<?php the_time('Y/m/d') ?>"><?php the_time('d') ?></a>
+          Category: <?php the_category(' ') ?>
+          <?php the_tags('Tags: ', ' ', ''); ?>
+          Comments: <?php comments_popup_link('0', '1', '%'); ?> <?php edit_post_link('Edit', '', ''); ?>
+        </p>
+        <div class="entry-content">
+          <?php the_content('Read the rest of this entry &raquo;'); ?>
+        </div>
+      </div>
 
-			<div class="post">
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('l, F jS, Y') ?></small>
+    <?php endwhile; ?>
 
-				<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-			</div>
+    <div class="navigation">
+      <div class="alignleft"><?php next_posts_link('さらに過去のエントリを表示') ?></div>
+      <div class="alignright"><?php previous_posts_link('より新しいエントリを表示') ?></div>
+    </div>
 
-		<?php endwhile; ?>
+  <?php else : ?>
 
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
+    <div class="pagetitle">「<?php echo $search_word; ?>」を含むエントリは見つかりませんでした</div>
+    <div class="noresult">他の言葉で検索してみてください</div>
 
-	<?php else : ?>
+  <?php endif; ?>
 
-		<h2 class="center">No posts found. Try a different search?</h2>
-		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
-
-	<?php endif; ?>
-
-	</div>
-
-<?php get_sidebar(); ?>
+  </div>
 
 <?php get_footer(); ?>
