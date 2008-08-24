@@ -21,8 +21,8 @@
   <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
   <?php include (TEMPLATEPATH . '/searchform.php'); ?>
   <ul id="grobal-navigator">
-    <li>About</li>
-    <li>Archive</li>
-    <li>Tags</li>
+    <li><a href="<?php echo get_option('home'); ?>/about">About</a></li>
+    <li><a href="<?php echo get_option('home'); ?>/about">Archive</a></li>
+    <li><a href="<?php echo get_option('home'); ?>/about">Tags</a></li>
   </ul>
 </div>

@@ -1,1 +1,22 @@
-The simple WordPress theme
+= quasi-Second-class: The simple WordPress theme
+
+== 概要
+
+quasi-Second-classはjune29が自身のブログ用に作成したWordPressテーマです．基本的に自分用に作成しているため，使用するためには後述のメモの内容を理解した上でやらなければならない作業がいくつかあります．
+
+== 特徴
+
+* シンプルな1カラム
+* hAtom対応
+* AutoPagerizeのマイクロフォーマット対応
+* (TODO) iPhoneからの閲覧に対応
+
+== メモ
+
+=== -moz-border-radiusの使用
+
+試験的に-moz-border-radiusプロパティを使用しています．Firefox3で閲覧したときに，角丸になる箇所がいくつかあります．
+
+=== wp-includes/link-template.phpの編集
+
+AutoPagerize対応のため，next_posts_link関数内で出力するaタグに，rel="next"を追加しています．
