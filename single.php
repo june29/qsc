@@ -15,7 +15,6 @@
           Date: <a href="<?php echo get_option('home'); ?>/<?php the_time('Y') ?>"><?php the_time('Y') ?></a>/<a href="<?php echo get_option('home'); ?>/<?php the_time('Y/m') ?>"><?php the_time('m') ?></a>/<a href="<?php echo get_option('home'); ?>/<?php the_time('Y/m/d') ?>"><?php the_time('d') ?></a>
           Category: <?php the_category(' ') ?>
           <?php the_tags('Tags: ', ' ', ''); ?>
-          Comments: <?php comments_popup_link('0', '1', '%'); ?> <?php edit_post_link('Edit', '', ''); ?>
         </p>
 
       <div class="entry-content">
