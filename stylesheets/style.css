@@ -193,3 +193,7 @@ h3 {
 hr {
   display: none;
 }
+
+.photo-caption {
+  text-align: center;
+}
