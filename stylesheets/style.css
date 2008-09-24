@@ -197,3 +197,14 @@ hr {
 .photo-caption {
   text-align: center;
 }
+
+blockquote {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #ccc;
+}
+
+a.quote {
+  display: block;
+  text-align: right;
+}
