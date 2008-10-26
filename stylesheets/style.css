@@ -126,6 +126,7 @@ h3 {
 .entry-content img, .entry-content object {
   display: block;
   margin: auto;
+  border: 3px solid #666;
 }
 
 .entry-content a img {
