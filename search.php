@@ -35,7 +35,7 @@
 
   <?php else : ?>
 
-    <div class="pagetitle">「<?php echo $search_word; ?>」を含むエントリは見つかりませんでした</div>
+    <div class="pagetitle">「<?php echo $s; ?>」を含むエントリは見つかりませんでした</div>
     <div class="noresult">他の言葉で検索してみてください</div>
 
   <?php endif; ?>
