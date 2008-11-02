@@ -14,7 +14,7 @@
   }
 
   /* This variable is for alternating comment background */
-  $oddcomment = 'class="alt" ';
+  $oddcomment = 'class="odd" ';
 ?>
 
 <!-- You can start editing here. -->
@@ -44,7 +44,7 @@
 
   <?php
     /* Changes every other comment to a different class */
-    $oddcomment = ( empty( $oddcomment ) ) ? 'class="alt" ' : '';
+    $oddcomment = ( strcmp($oddcomment, 'class="even" ') == 0 ) ? 'class="odd" ' : 'class="even" ';
   ?>
 
   <?php endforeach; /* end for each comment */ ?>

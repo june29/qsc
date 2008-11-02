@@ -159,8 +159,12 @@ h3 {
   padding: 5px;
 }
 
-.alt {
+.odd {
   background-color: #eee;
+}
+
+.even {
+  background-color: #ccc;
 }
 
 .commentmetadata * {
