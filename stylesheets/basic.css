@@ -188,3 +188,7 @@ a.quote {
   display: block;
   text-align: right;
 }
+
+.autopagerize_page_element > p {
+  display:none;
+}
