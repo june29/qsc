@@ -185,6 +185,8 @@ blockquote {
 }
 
 a.quote {
+  padding: 5px 10px;
+  background-color: #fff;
   display: block;
   text-align: right;
 }
