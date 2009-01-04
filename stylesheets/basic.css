@@ -194,3 +194,15 @@ a.quote {
 .autopagerize_page_element > p {
   display:none;
 }
+
+.entry-content table {
+  width: 100%;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.entry-content table td, th {
+  padding: 5px;
+  border: 3px solid #eee;
+  background-color: #fff;
+}
