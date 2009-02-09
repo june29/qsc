@@ -206,3 +206,15 @@ a.quote {
   border: 3px solid #eee;
   background-color: #fff;
 }
+
+dl {
+  padding: 5px;
+}
+
+dt {
+  padding: 0 10px;
+}
+
+dd {
+  padding: 0 40px;
+}
