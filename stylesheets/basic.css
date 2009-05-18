@@ -123,7 +123,7 @@ h2 a {
 }
 
 .entry-content ul li {
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
 #respond {
