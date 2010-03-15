@@ -184,7 +184,7 @@ blockquote {
   background-color: #ccc;
 }
 
-a.quote {
+.quote {
   padding: 5px 10px;
   background-color: #fff;
   display: block;
